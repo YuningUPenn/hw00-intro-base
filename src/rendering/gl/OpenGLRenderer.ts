@@ -22,10 +22,18 @@ class OpenGLRenderer {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
   }
 
-  render(camera: Camera, prog: ShaderProgram, drawables: Array<Drawable>) {
+  render(camera: Camera, prog: ShaderProgram, drawables: Array<Drawable>, hexcolor: string) {
     let model = mat4.create();
     let viewProj = mat4.create();
-    let color = vec4.fromValues(1, 0, 0, 1);
+    //let color = vec4.fromValues(1, 0, 0, 1);
+    if (hexcolor.startsWith('#')){
+      hexcolor = hexcolor.slice(1);
+    }
+    const r = parseInt(hexcolor.slice(0, 2), 16) / 255;
+    const g = parseInt(hexcolor.slice(2, 4), 16) / 255;
+    const b = parseInt(hexcolor.slice(4, 6), 16) / 255;
+    const a = hexcolor.length === 8 ? parseInt(hexcolor.slice(6, 8), 16) / 255 : 1.0;
+    let color = vec4.fromValues(r,g,b,a);
 
     mat4.identity(model);
     mat4.multiply(viewProj, camera.projectionMatrix, camera.viewMatrix);
