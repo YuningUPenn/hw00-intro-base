@@ -1,5 +1,9 @@
 # HW 0: Intro to Javascript and WebGL
 
+Here is a screenshot of what I've done. Link currently not included since I'm not sure why the github actions is not automatically running. I have created a cube class and an instance, and I'm using Perlin Noise to create the shadow on the cube, and modified to make the vertices bouncing.
+
+![screenshot](./hw00%20Screenshot.png)
+
 <p align="center">
   <img width="360" height="360" src="https://user-images.githubusercontent.com/1758825/132532354-e3a45402-e484-499e-bfa7-2d73b9f2c946.png">
 </p>
