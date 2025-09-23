@@ -1,5 +1,7 @@
 # HW 0: Intro to Javascript and WebGL
 
+**Update** for github pages ONLY: finally debug and build gh-pages branch successfully, with auto action run successfully. [Demo](https://yuningupenn.github.io/hw00-intro-base/) deployed.
+
 Here is a screenshot of what I've done. Link currently not included since I'm not sure why the github actions is not automatically running. I have created a cube class and an instance, and I'm using Perlin Noise to create the shadow on the cube, and modified to make the vertices bouncing.
 
 ![screenshot](./hw00%20Screenshot.png)
